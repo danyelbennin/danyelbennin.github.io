@@ -30,6 +30,21 @@
         }
     })
 
+    //Pause or Play Carousel
+    $(document).ready(function(){
+        $("#myCarousel").carousel({
+         interval : 8000,
+         pause: false
+        });
+    });
+
+    $('#playButton').click(function () {
+        $('#myCarousel').carousel('cycle');
+    });
+    $('#pauseButton').click(function () {
+        $('#myCarousel').carousel('pause');
+    });
+
     // Floating label headings for the contact form
     $(function() {
         $("body").on("input propertychange", ".floating-label-form-group", function(e) {
