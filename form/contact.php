@@ -1,42 +1,23 @@
 <?php
-
-// configure
-$from = ''; 
-$sendTo = 'danyelbennin@yahoo.com';
-$subject = 'New message from contact form';
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
-$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
-$errorMessage = 'There was an error while submitting the form. Please try again later';
-
-// let's do the sending
-
-try
-{
-    $emailText = "You have new message from contact form\n=============================\n";
-
-    foreach ($_POST as $key => $value) {
-
-        if (isset($fields[$key])) {
-            $emailText .= "$fields[$key]: $value\n";
-        }
-    }
-
-    mail($sendTo, $subject, $emailText, "From: " . $from);
-
-    $responseArray = array('type' => 'success', 'message' => $okMessage);
-}
-catch (\Exception $e)
-{
-    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
-}
-
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    $encoded = json_encode($responseArray);
-    
-    header('Content-Type: application/json');
-    
-    echo $encoded;
-}
-else {
-    echo $responseArray['message'];
-}
+	  
+	$name = $_POST['name'];
+	$surname = $_POST['surname'];
+	$email = $_POST['email'];
+		$phone= $_POST['phone'];
+		$message= $_POST['message'];
+	// create email body and send it	
+	$to = 'danyelbennin@yahoo.com'; // Email will be sent to thsi email Address
+	$email_subject = "Email From Website";
+	$email_body = "You have received a new message from your website. \n\n".
+					  "  \n First Name: $name \n ".
+					    "  \n Surname  : $surname \n ".
+						  "  \n Phone: $phone \n ".
+						    "  \n Message: $Message \n ".
+					  "Email: $email  \n";
+	$headers = "From: ".$email."\n";
+	$headers .= "Reply-To: $email";	
+	mail($to,$email_subject,$email_body,$headers);
+	$url = explode('?', $_SERVER['HTTP_REFERER']);
+            header('Location:' . $url[0]);
+	 	
+?>
