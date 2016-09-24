@@ -14,7 +14,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18BC9C;
+  color: #7FFF00;;
   outline: none;
 }
 
@@ -61,7 +61,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #18BC9C;
+  background: #7FFF00;
   color: white;
 }
 
@@ -73,7 +73,7 @@ header {
   text-transform: none;
 }
 .navbar-custom .navbar-brand:hover{
-  color: #18BC9C;
+  color: #7FFF00;
 }
 
 
@@ -82,7 +82,7 @@ header {
 }
 
 .navbar-custom .navbar-nav li a:hover{
-  color: #18BC9C;
+  color: #7FFF00;
 }
 
 .navbar-custom .navbar-nav li a.active,
@@ -90,8 +90,8 @@ header {
 
  {
   color: white;
-  border-color: #18BC9C;
-  background-color: #18BC9C;
+  border-color: #7FFF00;
+  background-color: #7FFF00;
 }
 
 .navbar-custom .navbar-toggle {
@@ -102,9 +102,9 @@ header {
 }
 .navbar-custom .navbar-toggle:hover 
 {
-  background-color: #18BC9C;
+  background-color: #7FFF00;
   color: white;
-  border-color: #18BC9C;
+  border-color: #7FFF00;
 }
 
 header .container {
@@ -200,7 +200,7 @@ footer .footer-below {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #18BC9C;
+  color: #7FFF00;
   background: white;
   border: solid 2px white;
 }
@@ -248,8 +248,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: white;
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #7FFF00;
+  border-color: #7FFF00;
   font-weight: 700;
 }
 .btn-success:hover,
@@ -281,11 +281,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #7FFF00;
+  border-color: #7FFF00;
 }
 .btn-success .badge {
-  color: #18BC9C;
+  color: #7FFF00;
   background-color: white;
 }
 .btn-social {
