@@ -3,8 +3,8 @@
 	$name = $_POST['name'];
 	$surname = $_POST['surname'];
 	$email = $_POST['email'];
-		$phone= $_POST['phone'];
-		$message= $_POST['message'];
+	$phone= $_POST['phone'];
+	$message= $_POST['message'];
 	// create email body and send it	
 	$to = 'danyelbennin@yahoo.com'; // Email will be sent to thsi email Address
 	$email_subject = "Email From Website";
